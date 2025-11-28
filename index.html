@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HEAVEN AFTER DARK RECORDS</title>
+  <meta name="description" content="HEAVEN AFTER DARK RECORDS — independent label. Releases, artists, shows and press kit." />
+  <meta property="og:title" content="HEAVEN AFTER DARK RECORDS" />
+  <meta property="og:description" content="Independent record label focused on dark ambient, electronic and experimental music." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b0f" />
+
+  <!-- Inline favicon (simple SVG) -->
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="12" fill="%230b0b0f"/><text x="50" y="58" font-size="40" text-anchor="middle" fill="%23ffffff" font-family="Arial, Helvetica, sans-serif">H</text></svg>'>
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --card:#0f1115;
+      --muted:#9aa0a6;
+      --accent:#c18fff;
+      --glass: rgba(255,255,255,0.03);
+      --max-width:1100px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#050507 0%, #0b0b0f 60%);color:#e9eef6}
+    a{color:var(--accent);text-decoration:none}
+    header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-bottom:1px solid rgba(255,255,255,0.02)}
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    .nav{display:flex;align-items:center;gap:20px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,#121217 0%,#1b1b22 100%);display:grid;place-items:center;font-weight:700}
+    h1.logo-title{font-size:18px;margin:0;letter-spacing:0.06em}
+    nav a{font-size:14px;color:var(--muted)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;padding:56px 0}
+    .hero-inner{display:flex;flex-direction:column;gap:18px}
+    .kicker{color:var(--accent);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-size:12px}
+    h2{font-size:40px;margin:0;line-height:1.03}
+    p.lead{color:var(--muted);max-width:64ch;margin:0;font-size:16px}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:10px;font-weight:600;border:1px solid rgba(255,255,255,0.03);background:var(--glass);cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent) 0%, #7ad0ff 100%);color:#07101a;border:none}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .card h3{margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Roster */
+    .roster{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .artist{display:flex;gap:14px;align-items:center}
+    .artist .avatar{width:72px;height:72px;border-radius:8px;background:linear-gradient(135deg,#15151a,#2a2430);display:grid;place-items:center;font-weight:700}
+
+    /* Releases */
+    .releases{display:flex;flex-direction:column;gap:12px}
+    .release{display:flex;gap:12px;align-items:center}
+    .release .cover{width:88px;height:88px;border-radius:8px;background:linear-gradient(135deg,#2b1120,#0f2430);display:grid;place-items:center}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,0.02);padding:28px 0;margin-top:48px}
+    .footer-grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
+
+    /* Responsive */
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .roster{grid-template-columns:1fr} .hero{padding:36px 0} h2{font-size:32px}}
+  </style>
+
+  <script>
+    // Minimal JS: progressive enhancement for contact form
+    function sendContact(e){
+      e.preventDefault();
+      var name=document.getElementById('name').value.trim();
+      var email=document.getElementById('email').value.trim();
+      var message=document.getElementById('message').value.trim();
+      if(!name||!email||!message){
+        alert('Please complete all fields.');
+        return;
+      }
+      // mailto fallback
+      var subject=encodeURIComponent('Press / Contact — ' + name);
+      var body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message);
+      window.location.href = 'mailto:press@heavenafterdark.com?subject='+subject+'&body='+body;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">H</div>
+        <div>
+          <div class="logo-title">HEAVEN AFTER DARK RECORDS</div>
+          <div class="muted" style="font-size:12px">Independent • Dark Ambient • Electronic • Experimental</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#releases">Releases</a> &nbsp;•&nbsp; <a href="#roster">Roster</a> &nbsp;•&nbsp; <a href="#about">About</a> &nbsp;•&nbsp; <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+  <section class="hero" style="text-align:center;padding:120px 0">
+    <h2 style="font-size:72px;margin:0;font-weight:800;letter-spacing:0.05em">HEAVEN AFTER DARK</h2>
+    <div style="font-size:28px;color:var(--muted);letter-spacing:0.3em;margin-top:6px">RECORDS</div>
+    <p class="lead" style="margin-top:30px;font-size:18px;text-align:center;width:100%">Where sound evolves in darkness. Crafting the future of immersive music.</p>
+    <div style="margin-top:34px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="#artists">Discover Artists</a>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </div>
+  </section>
+
+  <section style="margin-top:80px;text-align:center">
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:40px">
+      <div>
+        <h3>Innovative Sound</h3>
+        <p class="muted">Exploring new sonic landscapes through cutting‑edge production.</p>
+      </div>
+      <div>
+        <h3>Quality First</h3>
+        <p class="muted">Every release crafted with intention, precision, and emotion.</p>
+      </div>
+      <div>
+        <h3>Global Reach</h3>
+        <p class="muted">Connecting visionary artists with listeners worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:100px;text-align:center">
+    <h2 style="font-size:42px;font-weight:700">Ready to Make Music History?</h2>
+    <p class="muted" style="margin-top:10px;font-size:18px">Join the Heaven After Dark family and create something extraordinary.</p>
+    <div style="margin-top:30px"><a class="btn btn-primary" href="#contact">Start Your Journey</a></div>
+  </section>
+</main>
+</body>
+</html>
